@@ -1,0 +1,236 @@
+/*Variables*/
+
+/*Colors*/
+$yellow : #F7BF18;
+$orange : #F69C1D;
+$navy : #111F42;
+$black : #111111;
+$graydark : #5D5D77;
+$graylight : #CBCCCF;
+$white : #FFF;
+
+
+/*Fonts*/
+$fontHeader: 'Muli', sans-serif;
+$fontBody: 'Open Sans', sans-serif;
+
+
+/*Mixins*/
+
+/*Gradient - Vertical*/
+@mixin gradY() {
+  background: rgba(247,191,24,1);
+background: -moz-linear-gradient(top, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,191,24,1)), color-stop(100%, rgba(246,156,29,1)));
+background: -webkit-linear-gradient(top, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+background: -o-linear-gradient(top, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+background: -ms-linear-gradient(top, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+background: linear-gradient(to bottom, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf18', endColorstr='#f69c1d', GradientType=0 );
+}
+//#div { @include gradY(); }
+
+/*Gradient - Horizontal*/
+@mixin gradX() {
+  background: rgba(247,191,24,1);
+  background: -moz-linear-gradient(left, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247,191,24,1)), color-stop(100%, rgba(246,156,29,1)));
+  background: -webkit-linear-gradient(left, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  background: -o-linear-gradient(left, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  background: -ms-linear-gradient(left, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  background: linear-gradient(to right, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf18', endColorstr='#f69c1d', GradientType=1 );
+}
+
+//#div { @include gradX(); }
+
+/*Transition*/
+@mixin trans($type, $time) {
+  -webkit-transition: $type $time ease-in-out;
+  -moz-transition: $type $time ease-in-out;
+  -ms-transition: $type $time ease-in-out;
+  -o-transition: $type $time ease-in-out;
+  transition: $type $time ease-in-out;
+}
+//#div { @include trans(all, .2s); }
+
+
+/*Animation Keyframes*/
+
+/*Fade and Slide Down*/
+@mixin fadeSlide() {
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, -60%, 0);
+      transform: translate3d(0, -60%, 0);
+    }
+  }
+}
+//#div { @include fadeSlide(); }
+
+
+/*Overall Selectors*/
+
+
+body {
+  	background-color: $white;
+	color: $black;
+	font-family: $bodyFont;
+  	font-size: 16px;
+}
+
+::-moz-selection { background: lighten($yellow, 25%); }
+::selection { background: lighten($yellow, 25%); }
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+h2 {
+ 	font-size: 1.8em;
+}
+
+button {
+  	@include gradX();
+  	border-radius: 200px;
+ 	width: 100%;
+ 	@include trans(all, .2s);
+}
+
+button:hover {
+  	opacity: .75;
+}
+
+.whiteBut {
+  	background: none;
+  	background-color: $white;
+  	color: $navy;
+}
+
+.whiteBut:hover {
+  background-color: $white;
+  color: $navy;
+}
+
+input {
+  background-color: $white;
+  border-radius: 200px;
+  box-shadow: none;
+  border: solid 1px $yellow;
+  padding-left: 15px;
+}
+
+a {
+  color: $navy;
+}
+
+a:hover {
+  color: $yellow;
+}
+
+.hide {
+	display: none;
+}
+
+
+/*Login Page*/
+
+
+#welcomeBanner {
+	margin-top: 40px;
+	text-align: center;
+
+	h2 {
+		font-family: $fontHeader;
+		color: $navy;
+		font-weight: bold;
+		font-size: 3em;
+	}
+}
+
+#loginCon {
+	padding: 20px 5% 0 5%;
+
+	label {
+		color: $graydark;
+	}
+
+	#submitButton {
+		padding: 10px 40px 10px 40px;
+		background-color: $yellow;
+		font-family: $fontHeader;
+		font-size: 1em;
+		color: $white;
+	}
+
+	#submitButton:hover {
+		background-color: $orange;
+		cursor: pointer;
+	}
+
+	input {
+		border-radius: 100px;
+	}
+}
+
+
+/*Index Page*/
+
+
+#adminTitle {
+	margin-top: 40px;
+	margin-left: 40px;
+}
+
+#adminNav {
+	padding-left: 25px;
+	margin-top: 20px;
+	list-style-type: none;
+}
+
+
+/*Create User Page*/
+
+
+#createCon {
+	padding: 0 7% 0 7%;
+
+	label {
+		color: $graydark;
+		margin-top: 30px;
+	}
+
+	#submitButton {
+		margin-top: 20px;
+		padding: 10px 40px 10px 40px;
+		background-color: $yellow;
+		font-family: $fontHeader;
+		font-size: 1em;
+		color: $white;
+	}
+
+	#submitButton:hover {
+		background-color: $orange;
+		cursor: pointer;
+	}
+
+	input {
+		border-radius: 100px;
+	}
+}
+
+
+@media screen and (min-width: 640px) {
+
+
+}

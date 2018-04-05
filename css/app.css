@@ -1,0 +1,82 @@
+/*Transition*/
+/*Global Variables*/
+body {
+  background-color: #fff;
+  color: #051a27;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px; }
+
+::-moz-selection {
+  background: #91aeac; }
+
+::selection {
+  background: #91aeac; }
+
+h1, h2, h3, h4 {
+  font-family: "IBM Plex Sans", Helvetica, sans-serif; }
+
+p {
+  margin: 0; }
+
+a {
+  color: #82a3a1;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out; }
+
+a:hover {
+  color: #465f5e; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style-type: none;
+  font-size: 1.15em;
+  font-family: "IBM Plex Sans", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+/*Index Elements*/
+#bodyTitle {
+  font-size: 3.5em;
+  line-height: 1em;
+  text-align: center;
+  margin: 20px 0 40px 0;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+#filterList {
+  margin-bottom: 30px;
+  text-align: center; }
+  #filterList ul li {
+    display: inline;
+    margin-right: 10px; }
+  #filterList ul li:last-child {
+    margin-right: 0px; }
+
+#movieSamples h2 {
+  font-size: 3em;
+  line-height: 1em; }
+#movieSamples .movieSelection {
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #91aeac; }
+#movieSamples .yearText {
+  font-weight: bold;
+  margin-bottom: 10px; }
+#movieSamples p {
+  font-size: 1.5em;
+  padding-left: 20px;
+  line-height: 1.25em; }
+
+@media screen and (min-width: 40em) {
+  #movieSamples {
+    padding: 0 5% 0 5%; }
+    #movieSamples .movieSelection {
+      padding: 0 5% 30px 5%; } }
+
+/*# sourceMappingURL=app.css.map */

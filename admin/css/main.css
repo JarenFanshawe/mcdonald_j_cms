@@ -1,0 +1,132 @@
+/*Variables*/
+/*Colors*/
+/*Fonts*/
+/*Mixins*/
+/*Gradient - Vertical*/
+/*Gradient - Horizontal*/
+/*Transition*/
+/*Animation Keyframes*/
+/*Fade and Slide Down*/
+/*Overall Selectors*/
+body {
+  background-color: #FFF;
+  color: #111111;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; }
+
+::-moz-selection {
+  background: #fbe193; }
+
+::selection {
+  background: #fbe193; }
+
+.fullWidth {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial; }
+
+h2 {
+  font-size: 1.8em; }
+
+button {
+  background: #f7bf18;
+  background: -moz-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #f7bf18), color-stop(100%, #f69c1d));
+  background: -webkit-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -o-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -ms-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: linear-gradient(to right, #f7bf18 0%, #f69c1d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf18', endColorstr='#f69c1d', GradientType=1 );
+  border-radius: 200px;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+button:hover {
+  opacity: .75; }
+
+.whiteBut {
+  background: none;
+  background-color: #FFF;
+  color: #111F42; }
+
+.whiteBut:hover {
+  background-color: #FFF;
+  color: #111F42; }
+
+input {
+  background-color: #FFF;
+  border-radius: 200px;
+  box-shadow: none;
+  border: solid 1px #F7BF18;
+  padding-left: 15px; }
+
+a {
+  color: #111F42; }
+
+a:hover {
+  color: #F7BF18; }
+
+.hide {
+  display: none; }
+
+/*Login Page*/
+#welcomeBanner {
+  margin-top: 40px;
+  text-align: center; }
+  #welcomeBanner h2 {
+    font-family: "Muli", sans-serif;
+    color: #111F42;
+    font-weight: bold;
+    font-size: 3em; }
+
+#loginCon {
+  padding: 20px 5% 0 5%; }
+  #loginCon label {
+    color: #5D5D77; }
+  #loginCon #submitButton {
+    padding: 10px 40px 10px 40px;
+    background-color: #F7BF18;
+    font-family: "Muli", sans-serif;
+    font-size: 1em;
+    color: #FFF; }
+  #loginCon #submitButton:hover {
+    background-color: #F69C1D;
+    cursor: pointer; }
+  #loginCon input {
+    border-radius: 100px; }
+
+/*Index Page*/
+#adminTitle {
+  margin-top: 40px;
+  margin-left: 40px; }
+
+#adminNav {
+  padding-left: 25px;
+  margin-top: 20px;
+  list-style-type: none; }
+
+/*Create User Page*/
+#createCon {
+  padding: 0 7% 0 7%; }
+  #createCon label {
+    color: #5D5D77;
+    margin-top: 30px; }
+  #createCon #submitButton {
+    margin-top: 20px;
+    padding: 10px 40px 10px 40px;
+    background-color: #F7BF18;
+    font-family: "Muli", sans-serif;
+    font-size: 1em;
+    color: #FFF; }
+  #createCon #submitButton:hover {
+    background-color: #F69C1D;
+    cursor: pointer; }
+  #createCon input {
+    border-radius: 100px; }
+
+/*# sourceMappingURL=main.css.map */
