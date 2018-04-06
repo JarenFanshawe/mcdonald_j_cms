@@ -82,7 +82,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf18', end
 body {
   	background-color: $white;
 	color: $black;
-	font-family: $bodyFont;
+	font-family: $fontBody;
   	font-size: 16px;
 }
 
@@ -229,8 +229,6 @@ a:hover {
 	}
 }
 
-
-@media screen and (min-width: 640px) {
-
-
+#editLinks {
+	color: $navy;
 }

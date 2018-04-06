@@ -12,7 +12,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>CMS Delete Users</title>
+	<title>CMS Edit Movies</title>
 
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/main.css">
@@ -21,7 +21,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Delete User</h1>
+	<h1>Edit Movies</h1>
 
 	<section class="row fullWidth" id="loginCon">
 		<a href="admin_index.php">Back</a>
@@ -31,7 +31,7 @@
 		<?php
 
 		while($row = mysqli_fetch_array($users)){
-			echo "{$row['movies_title']}<a href=\"admin_editall.php?id={$row['movies_id']}\">Edit</a><br>";
+			echo "{$row['movies_title']}<a id=\"editLinks\" href=\"admin_editall.php?id={$row['movies_id']}\">  Edit</a><br>";
 		}
 
 		?>
